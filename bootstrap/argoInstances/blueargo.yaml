@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: blueargocd
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: blueargocd
+  namespace: blueargocd
+spec:
+  applicationSet: {}
+  server:
+    route:
+      enabled: true
